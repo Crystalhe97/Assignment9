@@ -44,7 +44,7 @@ class Game:
             except ValueError:
                 print("Invalid imput, try again")
                 continue
-        pd.DataFrame(self.log_list).to_csv("./logs/database.csv", index=False, header=True,mode='a',)
+        pd.DataFrame(self.log_list).to_csv("./logs/database.csv", index=False, header=False,mode='a',)
         print(self._board)
         print("Game Draw") if self._result == "draw" else print(f"{self._result} won!")
         
